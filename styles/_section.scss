@@ -170,7 +170,7 @@ card {
         @extend card;
         height: 100vh;
         @include flex(center, center);
-        display: flex;
+        flex-direction: column;
         .para {
           line-height: 1.4;
           font-weight: 600;
