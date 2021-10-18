@@ -8,7 +8,7 @@ harmburger.addEventListener("click", () => {
     menuOpen = true;
     nav.forEach((navs) => {
       navs.classList.toggle("active-left");
-       navs.style.backgroundColor = "lightgreen";
+      //  navs.style.backgroundColor = "lightgreen";
     });
 
   } else {

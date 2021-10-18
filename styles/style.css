@@ -24,7 +24,9 @@
     top: 100px;
     left: 0;
     z-index: 99;
-    background-color: whitesmoke;
+    background-color: lightgreen;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
   }
 }
 
@@ -209,9 +211,11 @@ card, .section .flex-container .flex-container-left .card, .section .flex-contai
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media screen and (max-width: 600px) {
@@ -296,12 +300,12 @@ card, .section .flex-container .flex-container-left .card, .section .flex-contai
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .section .flex-container .flex-container-left .card .card-text .checkbox {
@@ -311,6 +315,9 @@ card, .section .flex-container .flex-container-left .card, .section .flex-contai
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   font-size: 10px;
 }
 
@@ -352,6 +359,9 @@ card, .section .flex-container .flex-container-left .card, .section .flex-contai
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
   font-size: 10px;
 }
 
@@ -363,6 +373,9 @@ card, .section .flex-container .flex-container-left .card, .section .flex-contai
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;
@@ -422,12 +435,12 @@ card, .section .flex-container .flex-container-left .card, .section .flex-contai
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 5px;
   margin-top: 15px;
 }
@@ -458,16 +471,16 @@ card, .section .flex-container .flex-container-left .card, .section .flex-contai
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .section .flex-container .flex-container-right .card .para {
