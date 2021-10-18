@@ -1,0 +1,156 @@
+@import "./global";
+
+.aside {
+  flex: 2;
+  height: 100vh;
+  box-shadow: 0 0 15px -8px $black;
+  position: sticky;
+  top: 0;
+  @include tablets{
+    display: none;
+    width: 100%;
+  }
+
+&.active-left{
+  @include tablets{
+    display: block;
+    position: absolute;
+    top: 100px ;
+    left: 0;
+    z-index: 99;
+    background-color: whitesmoke
+  }
+}
+  // @include tablets {
+  //     .aside{
+  //       display: none
+  //     };
+  //       &.left-active {
+  //     display: none;
+  //   }
+  // }
+
+  .left {
+    @include flex-direction;
+    padding: 10px 15px 50px;
+
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+    .link-container {
+      @include flex-direction;
+      height: 300px;
+      margin-top: 50px;
+      border-bottom: 1px solid rgb(209, 206, 206);
+
+      a {
+        @include flex(center, none);
+
+        text-decoration: none;
+        margin: 5px 0;
+        padding: 10px 15px;
+        color: $black;
+        font-weight: 600;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: rgb(119, 117, 117);
+        }
+        span {
+          margin-left: 10px;
+        }
+
+        &.active {
+          background-color: $lightgreen;
+
+          svg {
+            fill: $green;
+          }
+        }
+      }
+      .link-dropdown {
+        @include flex(center, space-between);
+        margin: 5px 0;
+      }
+    }
+    .link-wrapper {
+      margin: 20px 0 10px;
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+    .contact-wrapper {
+      margin-bottom: 30px;
+      a {
+        text-decoration: none;
+        color: $black;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+    .card {
+      background-color: white;
+      width: 100%;
+      padding: 15px 15px 20px;
+      border-radius: 5px;
+      position: relative;
+
+      .circle1 {
+        content: '';
+        clip-path: circle(55.1% at 100% 10%);
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        background-color:white;
+        z-index: 2;
+        top: 0;
+        right: 0;
+      }
+       .circle2 {
+        content: '';
+        clip-path: circle(55.1% at 100% 10%);
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        background-color: whitesmoke;
+        top: 0;
+        right: 0;
+      }
+      .circle3 {
+        content: '';
+        clip-path: circle(55.1% at 100% 10%);
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: whitesmoke;
+        z-index: 999;
+        top: 0;
+        right: 0;
+      }
+
+
+      p {
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 10px;
+      }
+
+      div {
+        a {
+          text-decoration: none;
+          background-color: $green;
+          cursor: pointer;
+          color: white;
+          padding: 10px 30px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

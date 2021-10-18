@@ -1,0 +1,41 @@
+$green: #6ABF43;
+$lightgreen: #eaf7e4;
+$black: black;
+$lightblack: rgb(119, 117, 117);
+
+@mixin universal{
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    };
+    body{
+        background-color: whitesmoke;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width:600px){
+        @content;
+    }
+}
+
+
+@mixin flex($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin flex-direction{
+    display: flex;
+    flex-direction: column;
+}

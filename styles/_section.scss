@@ -1,0 +1,198 @@
+card {
+  padding: 20px;
+  box-shadow: 0 0 15px -8px rgb(182, 180, 180);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.section {
+  padding: 20px;
+  overflow: hidden;
+
+  h1 {
+    font-size: 2.3em;
+    font-weight: 600px;
+  }
+  .flex-container {
+    @include flex(none, space-around);
+
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+
+    .flex-container-left {
+      @include flex-direction;
+      flex: 4;
+
+      .text {
+        margin: 40px 0 10px;
+        font-weight: 500;
+      }
+
+      .card {
+        @extend card;
+        margin-right: 30px;
+
+        @include tablets {
+          margin-right: 0;
+        }
+        .search-input {
+          position: relative;
+
+          input {
+            width: 100%;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 12px -10px black;
+
+            &::placeholder {
+              font-weight: 500;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          svg {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            fill: $lightblack;
+          }
+        }
+        .card-text {
+          @include flex(center, space-between);
+
+          .checkbox {
+            @include flex(center, none);
+
+            font-size: 10px;
+
+            input[type="checkbox"] {
+              appearance: none;
+              width: 20px;
+              height: 20px;
+              background-color: white;
+              border: 2px solid $lightblack;
+              @include flex(center, center);
+              margin-right: 10px;
+
+              &:after {
+                content: "\f00c";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 700;
+                display: none;
+              }
+              &:checked:after {
+                display: block;
+              }
+            }
+          }
+          .add {
+            @include flex(center, none);
+            font-size: 10px;
+            svg {
+              fill: $lightblack;
+            }
+          }
+        }
+        .card-flex {
+          @include flex(none, space-around);
+          flex-wrap: wrap;
+
+          .card-flex-item {
+            width: 170px;
+            @include flex-direction;
+
+            padding-bottom: 20px;
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px -8px black;
+
+            @include tablets {
+              width: 100%;
+            }
+
+            .img-wrapper {
+              &.imgwrapper {
+                background-color: rgb(230, 245, 230);
+              }
+
+              &.imgwrapper2 {
+                background-color: rgb(247, 242, 242);
+              }
+
+              img {
+                width: 100%;
+                height: 120px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                @include tablets {
+                  height: 150px;
+                }
+              }
+            }
+            h5 {
+              font-weight: 700;
+              padding: 10px 5px;
+            }
+            .price-wrapper {
+              @include flex(center, space-between);
+
+              padding: 0 5px;
+              margin-top: 15px;
+
+              .amount {
+                color: $green;
+                font-weight: 700;
+                font-size: 1em;
+              }
+              .cost {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .flex-container-right {
+      flex: 4;
+
+      .text2 {
+        margin: 40px 0 10px;
+        font-weight: 500;
+      }
+      .card {
+        @extend card;
+        height: 100vh;
+        @include flex(center, center);
+        display: flex;
+        .para {
+          line-height: 1.4;
+          font-weight: 600;
+        }
+        .para2 {
+          color: $green;
+          font-weight: 700;
+        }
+        svg {
+          fill: $green;
+          border: 3px solid $green;
+          border-radius: 50%;
+          font-weight: 600;
+          margin-top: 35px;
+          width: 30px;
+          height: 30px;
+        }
+
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
