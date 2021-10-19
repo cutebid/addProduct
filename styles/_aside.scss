@@ -6,22 +6,22 @@
   box-shadow: 0 0 15px -8px $black;
   position: sticky;
   top: 0;
-  @include tablets{
+  @include tablets {
     display: none;
     width: 100%;
   }
 
-&.active-left{
-  @include tablets{
-    display: block;
-    position: absolute;
-    top: 100px ;
-    left: 0;
-    z-index: 99;
-    background-color: lightgreen;
-    transition: all 1s ease;
+  &.active-left {
+    @include tablets {
+      display: block;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      z-index: 99;
+      background-color: lightgreen;
+      transition: all 1s ease;
+    }
   }
-}
   // @include tablets {
   //     .aside{
   //       display: none
@@ -66,6 +66,7 @@
 
         &.active {
           background-color: $lightgreen;
+          border-radius: 5px ;
 
           svg {
             fill: $green;
@@ -103,18 +104,18 @@
       position: relative;
 
       .circle1 {
-        content: '';
+        content: "";
         clip-path: circle(55.1% at 100% 10%);
         width: 80px;
         height: 80px;
         position: absolute;
-        background-color:white;
+        background-color: white;
         z-index: 2;
         top: 0;
         right: 0;
       }
-       .circle2 {
-        content: '';
+      .circle2 {
+        content: "";
         clip-path: circle(55.1% at 100% 10%);
         width: 120px;
         height: 120px;
@@ -124,7 +125,7 @@
         right: 0;
       }
       .circle3 {
-        content: '';
+        content: "";
         clip-path: circle(55.1% at 100% 10%);
         width: 50px;
         height: 50px;
@@ -135,7 +136,6 @@
         right: 0;
       }
 
-
       p {
         margin-bottom: 30px;
         font-weight: 500;
@@ -143,13 +143,14 @@
       }
 
       div {
+        padding: 10px 30px;
+        border-radius: 5px;
+        background-color: $green;
+
         a {
           text-decoration: none;
-          background-color: $green;
-          cursor: pointer;
           color: white;
-          padding: 10px 30px;
-          border-radius: 5px;
+          cursor: pointer;
         }
       }
     }
